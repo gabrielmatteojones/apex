@@ -3,7 +3,7 @@ layout: post
 title: About
 ---
 
-### Our mission is to empower healthcare institutions with cleaner, more accurate data, enabling better patient care and operational insights.
+### Our mission is to empower institutions with cleaner, more accurate data, enabling better operational insights.
 
 #### Our Product
 
