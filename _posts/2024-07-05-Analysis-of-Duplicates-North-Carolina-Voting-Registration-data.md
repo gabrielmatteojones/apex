@@ -1,5 +1,5 @@
 ---
-title: Analysis of Duplicates: North Carolina Voting Registration data
+title: Analysis of Duplicates North Carolina Voting Registration data
 layout: post
 author: RootSquare
 category: Data Analysis
