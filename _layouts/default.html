@@ -1,51 +1,71 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  <head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>{{ site.title }}{% if page.title and page.title != "" %} &mdash; {{ page.title }}{% endif %}</title>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
-    {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}  
+<head>
 
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}?{{ site.time | date: '%s%N' }}">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="{{ site.icon }}">
+  <title>{{ site.title }}{% if page.title and page.title != "" %} &mdash; {{ page.title }}{% endif %}</title>
 
-    {%- if jekyll.environment == 'production' and site.google_analytics -%}
-      {%- include google-analytics.html -%}
-    {%- endif -%}
+  {% if site.description %}
+  <meta name="description" content="{{ site.description }}">{% endif %}
 
-  </head>
-  <body>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | absolute_url }}?{{ site.time | date: '%s%N' }}">
 
-    {% if page.layout == 'home' %}
-      <a href="#main" class="skip-navigation">
-        Skip to list of posts
-      </a>
-    {% else %}
-      <a href="#main" class="skip-navigation">
-        Skip to content
-      </a>
-    {% endif %}
+  <link rel="apple-touch-icon" href="{{ site.icon }}">
 
-    {{ content }}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+  {%- include google-analytics.html -%}
+  {%- endif -%}
 
-    {% unless site.hide_search %}
-      {% include search.html %}
-    {% endunless %}
+</head>
 
-    {% include menu.html %}
+<body>
 
-    {% unless site.hide_credits %}
-      <aside class="site-credits">
-        <p>
-          <small><a href="https://github.com/patdryburgh/hitchens">Hitchens Theme</a> powered by <a href="http://jekyllrb.com">Jekyll</a></small>
-        </p>
-      </aside>
-    {% endunless %}
+  {% if page.layout == 'home' %}
+  <a href="#main" class="skip-navigation">
+    Skip to list of posts
+  </a>
+  {% else %}
+  <a href="#main" class="skip-navigation">
+    Skip to content
+  </a>
+  {% endif %}
 
-  </body>
+  {{ content }}
+
+  {% unless site.hide_search %}
+  {% include search.html %}
+  {% endunless %}
+
+  {% include menu.html %}
+
+  {% unless site.hide_credits %}
+  <div class="contact-us">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+  <aside class="site-credits">
+    <p>
+      <small><a href="https://github.com/patdryburgh/hitchens">Hitchens Theme</a> powered by <a
+          href="http://jekyllrb.com">Jekyll</a></small>
+    </p>
+  </aside>
+  {% endunless %}
+
+</body>
+
 </html>
