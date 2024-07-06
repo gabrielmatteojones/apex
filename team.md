@@ -4,9 +4,6 @@ title: Team
 ---
 
 
-
-# Team Members
-
 <div style="display: flex; justify-content: space-between;">
 
   <figure style="flex: 1; text-align: center; margin: 1px;">
