@@ -12,10 +12,10 @@ layout: default
   {% if site.title %}
   <div class="header-content">
     <img src="{{ site.baseurl }}/assets/images/rootsquare_blackbox.svg" alt="RootSquare" class="header-image">
-    {% if site.title %}
-    <h1 class="site-title">{{ site.title }}</h1>
-    {% endif %}
   </div>
+  {% endif %}
+  {% if site.title %}
+  <h1 class="site-title">{{ site.title }}</h1>
   {% endif %}
   {% if site.title %}
   <h2>
@@ -83,11 +83,11 @@ layout: default
   }
 
   .header-image {
-    width: 150px;
+    width: 200px;
     /* Set the desired width */
     height: auto;
     /* Maintain aspect ratio */
-    margin: 0;
+    margin-right: 0;
     /* Remove any margin to ensure no space */
   }
 
