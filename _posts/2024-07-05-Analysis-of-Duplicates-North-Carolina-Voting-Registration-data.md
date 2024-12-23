@@ -11,8 +11,8 @@ At Rootsquare.io, we specialize in advanced solutions for detecting duplicates i
 In this post, we showcase the application of our solution to the **North Carolina Voter Registration Database**, where we identified **2619 pairs potential duplicates**. Our solution clears out any outstanding potential duplicates with specific type duplicate classification.
 
 
-This post demonstrates our solution's application on the **North Carolina Voter Registration Database** (retrieved from https://s3.amazonaws.com/dl.ncsbe.gov/data/ncvoter_Statewide.zip). We started with $8,561,891$ unique NC voter IDs and filtered out historical voters using the "status_cd" column, leaving $6,455,829$ active records for processing. 
-Our solution identified **$2619$ pairs potential duplicates**, prioritizing accuracy and minimizing false positives.
+This post demonstrates our solution's application on the **North Carolina Voter Registration Database** (retrieved from https://s3.amazonaws.com/dl.ncsbe.gov/data/ncvoter_Statewide.zip). We started with 8,561,891 unique NC voter IDs and filtered out historical voters using the "status_cd" column, leaving **6,455,829** active records for processing. 
+Our solution identified **2,619 pairs potential duplicates**, prioritizing accuracy and minimizing false positives.
 
 These include:  
 - Standard duplicates (same individuals with multiple records)  
@@ -24,7 +24,7 @@ This minimizes the need for manual review and ensures data integrity.
 
 **Our solution depicts high accuracy for each category X%,X%, and X%, respectively.** 
 
-## Analysis Overview  
+## Technical Analysis Overview  
 
 ### 1. Types of Duplicates  
 
