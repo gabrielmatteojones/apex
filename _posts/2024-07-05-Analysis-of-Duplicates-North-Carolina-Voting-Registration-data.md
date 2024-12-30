@@ -8,21 +8,33 @@ category: Data Analysis
 
 At Rootsquare.io, we specialize in advanced solutions for detecting duplicates in large databases, particularly within the healthcare sector. Our proprietary technology is capable of identifying nuanced cases such as duplicates from marriage/separation, and even distinguishing twins with remarkable accuracy.  
 
-In this post, we showcase the application of our solution to the **North Carolina Voter Registration Database**, where we identified **2619 pairs potential duplicates**. Our solution clears out any outstanding potential duplicates with specific type duplicate classification.
+In this post, we showcase the application of our solution to the **North Carolina Voter Registration Database**, where we identified **2611 pairs potential duplicates**. Our solution clears out any outstanding potential duplicates with specific type duplicate classification.
 
 
 This post demonstrates our solution's application on the **North Carolina Voter Registration Database** (retrieved from https://s3.amazonaws.com/dl.ncsbe.gov/data/ncvoter_Statewide.zip). We started with 8,561,891 unique NC voter IDs and filtered out historical voters using the "status_cd" column, leaving **6,455,829** active records for processing. 
 Our solution identified **2,619 pairs potential duplicates**, prioritizing accuracy and minimizing false positives.
 
 These include:  
-- Standard duplicates (same individuals with multiple records)  
-- Duplicates caused by **marriage/separation**  
-- Cases involving **twins**  
+- Standard duplicates (same individuals with multiple records)  - **SD**
+- Duplicates caused by **marriage/separation**  - **MS**
+- Cases involving **twins**  - **T**
+- Non duplicates - **ND**
 
 We prioritize accuracy to ensure our solution flags true duplicates while minimizing the risk of incorrectly identifying separate individuals. 
 This minimizes the need for manual review and ensures data integrity.
 
-**Our solution depicts high accuracy for each category X%,X%, and X%, respectively.** 
+**Our solution depicts high accuracy for each category 90%, 91%, 98%, and 94%, respectively.** 
+
+#### *“The average duplicate rate within healthcare organizations is 18%”- Verato*
+
+Using our solution will result into: 
+1. Improved data integrity and Patient safety
+2. Reduced Operational Inefficiencies
+3. Reduced healthcare costs
+4. Positive Impact on data Analytics and Research
+
+Moreover, an improved and clean EHR can reduce poor patient outcomes and ultimately improve the quality of life of patients and organizations.
+
 
 ## Technical Analysis Overview  
 

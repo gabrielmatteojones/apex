@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   A deduplication company.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://rootsquareio.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-icon: assets/images/icon-512.png
+icon: assets/images/dalle_noback_donk.png
 twitter_username: patdryburgh
 github_username:  patdryburgh
 
