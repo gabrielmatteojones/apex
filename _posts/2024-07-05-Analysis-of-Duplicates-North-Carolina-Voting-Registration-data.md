@@ -6,15 +6,10 @@ category: Data Analysis
 ---
 
 
-At Rootsquare.io, we specialize in advanced solutions for detecting duplicates in large databases, particularly within the healthcare sector. Our proprietary technology is capable of identifying nuanced cases such as duplicates from marriage/separation, and even distinguishing twins with remarkable accuracy.  
+At RootSquare.io, we specialize in advanced data cleansing solutions specifically designed for healthcare organizations. Our proprietary technology excels at identifying and resolving duplicate patient records within person demographic data, even in nuanced cases arising from marriage/separation. Remarkably, our solution can even distinguish twins with exceptional accuracy. This focus on the healthcare industry ensures our deep understanding of the complexities of patient data and allows us to deliver unparalleled results.  
 
-In this post, we showcase the application of our solution to the **North Carolina Voter Registration Database**, where we identified **2611 pairs potential duplicates**. Our solution clears out any outstanding potential duplicates with specific type duplicate classification.
+To demonstrate the effectiveness of our solution in a real-world scenario, we applied it to the **North Carolina Voter Registration Database**. This publicly available dataset allowed us to rigorously test our methodologies for identifying duplicate person demographic data. Using traditional record matching techniques, our solution successfully identified **2,611 potential duplicate pairs** within the dataset. We then developed predictive models to classify these potential duplicates into the following categories:
 
-
-This post demonstrates our solution's application on the **North Carolina Voter Registration Database** (retrieved from https://s3.amazonaws.com/dl.ncsbe.gov/data/ncvoter_Statewide.zip). We started with 8,561,891 unique NC voter IDs and filtered out historical voters using the "status_cd" column, leaving **6,455,829** active records for processing. 
-Our solution identified **2,611 pairs potential duplicates**, prioritizing accuracy and minimizing false positives.
-
-These include:  
 - Standard duplicates (same individuals with multiple records)  - **SD**
 - Duplicates caused by **marriage/separation**  - **MS**
 - Cases involving **twins**  - **T**
@@ -27,16 +22,20 @@ This minimizes the need for manual review and ensures data integrity.
 
 #### *“The average duplicate rate within healthcare organizations is 18%”- Verato*
 
-Using our solution will result into: 
-1. Improved data integrity and Patient safety
-2. Reduced Operational Inefficiencies
-3. Reduced healthcare costs
-4. Positive Impact on data Analytics and Research
+Our solution delivers a powerful impact on healthcare organizations by:
 
-Moreover, an improved and clean EHR can reduce poor patient outcomes and ultimately improve the quality of life of patients and organizations.
+1.  **Protecting Patient Safety:** By eliminating duplicate records, we ensure that healthcare professionals have access to accurate and complete patient information, minimizing the risk of adverse events.
+2.  **Optimizing Operational Efficiency:** Our automated solution streamlines data management processes, freeing up valuable time and resources for healthcare staff.
+3.  **Reducing Healthcare Costs:** By minimizing errors, reducing manual effort, and improving resource allocation, our solution contributes to significant cost savings.
+4.  **Empowering Data-Driven Insights:** Clean and reliable data empowers healthcare organizations to conduct more effective analytics and research, driving innovation and improving patient care.
 
+The result is a more accurate, efficient, and cost-effective healthcare system, ultimately leading to better patient outcomes and an enhanced quality of life for both patients and healthcare providers.
 
-## Technical Analysis Overview  
+## Technical Analysis Overview
+
+### 0. Data 
+The data for this analysis originated from the North Carolina Voter Registration Database, a publicly available dataset accessible through the North Carolina State Board of Elections website: https://www.ncsbe.gov/results-data/voter-registration-data
+The total amount of active records analysed was **6,455,829**. 
 
 ### 1. Types of Duplicates  
 
