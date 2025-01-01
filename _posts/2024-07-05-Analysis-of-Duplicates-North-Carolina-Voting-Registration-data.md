@@ -6,13 +6,15 @@ category: Data Analysis
 ---
 
 
-At RootSquare.io, we specialize in advanced data cleansing solutions specifically designed for healthcare organizations. Our proprietary technology excels at identifying and resolving duplicate patient records within person demographic data, even in nuanced cases arising from marriage/separation. Remarkably, our solution can even distinguish twins with exceptional accuracy. This focus on the healthcare industry ensures our deep understanding of the complexities of patient data and allows us to deliver unparalleled results.  
+At RootSquare.io, we specialize in advanced data cleansing solutions specifically designed for healthcare organizations. Our proprietary technology excels at identifying and resolving duplicate patient records within person demographic data, even in nuanced cases arising from marriage/separation. Remarkably, our solution can even distinguish twins with exceptional accuracy. This focus on the healthcare industry ensures our deep understanding of the complexities of patient data and allows us to deliver unparalleled results.
+    
+     
 
-To demonstrate the effectiveness of our solution in a real-world scenario, we applied it to the **North Carolina Voter Registration Database**. This publicly available dataset allowed us to rigorously test our methodologies for identifying duplicate person demographic data. Using traditional record matching techniques, our solution successfully identified **2,611 potential duplicate pairs** within the dataset. We then developed predictive models to classify these potential duplicates into the following categories:
+To demonstrate the effectiveness of our solution in a real-world scenario, we applied it to the **North Carolina Voter Registration Database**. This publicly available dataset allowed us to rigorously test our methodologies for identifying duplicate persons. Using traditional record matching techniques, our solution successfully identified **2,611 potential duplicate pairs** within the dataset. We then developed predictive models to classify these potential duplicates into the following categories:
 
 - Standard duplicates (same individuals with multiple records)  - **SD**
 - Duplicates caused by **marriage/separation**  - **MS**
-- Cases involving **twins**  - **T**
+- Cases involving **Multible births**  - **T**
 - Non duplicates - **ND**
 
 We prioritize accuracy to ensure our solution flags true duplicates while minimizing the risk of incorrectly identifying separate individuals. 
@@ -22,7 +24,7 @@ This minimizes the need for manual review and ensures data integrity.
 
 #### *“The average duplicate rate within healthcare organizations is 18%”- Verato*
 
-Our solution delivers a powerful impact on healthcare organizations by:
+Our solution can deliver a powerful impact on healthcare organizations by:
 
 1.  **Protecting Patient Safety:** By eliminating duplicate records, we ensure that healthcare professionals have access to accurate and complete patient information, minimizing the risk of adverse events.
 2.  **Optimizing Operational Efficiency:** Our automated solution streamlines data management processes, freeing up valuable time and resources for healthcare staff.
@@ -33,8 +35,9 @@ The result is a more accurate, efficient, and cost-effective healthcare system, 
 
 ## Technical Analysis Overview
 
-### 0. Data 
-The data for this analysis originated from the North Carolina Voter Registration Database, a publicly available dataset accessible through the North Carolina State Board of Elections website: https://www.ncsbe.gov/results-data/voter-registration-data
+### 0. Data
+
+The data for this analysis originated from the North Carolina Voter Registration Database, available at [North Carolina State Board of Elections](https://www.ncsbe.gov/results-data/voter-registration-data).
 The total amount of active records analysed was **6,455,829**. 
 
 ### 1. Types of Duplicates  
@@ -44,8 +47,6 @@ The total amount of active records analysed was **6,455,829**.
 
 ![Analysis Bar Chart](/dup_figs_maps/plot_dups_types.png "Bar Chart of Duplicate Types")
 
-
----
 
 ### 2. Standard Duplicates (same individuals with multiple records)  
 
