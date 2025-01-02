@@ -6,23 +6,24 @@ category: Data Analysis
 ---
 
 
-At RootSquare.io, we specialize in advanced data cleansing solutions specifically designed for healthcare organizations. Our proprietary technology excels at identifying and resolving duplicate patient records within person demographic data, even in nuanced cases arising from marriage/separation. Remarkably, our solution can even distinguish twins with exceptional accuracy. This focus on the healthcare industry ensures our deep understanding of the complexities of patient data and allows us to deliver unparalleled results.
+At RootSquare.io, we specialize in advanced data cleansing solutions specifically designed for healthcare organizations. Our proprietary technology excels at identifying and resolving duplicate patient records within person demographic data, even in nuanced cases arising from marriage/separation. Remarkably, our solution can even distinguish twins with exceptional accuracy.
     
      
 
-To demonstrate the effectiveness of our solution in a real-world scenario, we applied it to the **North Carolina Voter Registration Database**. This publicly available dataset allowed us to rigorously test our methodologies for identifying duplicate persons. Using traditional record matching techniques, our solution successfully identified **2,611 potential duplicate pairs** within the dataset. We then developed predictive models to classify these potential duplicates into the following categories:
+To demonstrate the effectiveness of our solution in a real-world scenario, we applied it to the **North Carolina Voter Registration Database**. This publicly available dataset allowed us to rigorously test our methodologies for identifying duplicate persons. Our solution successfully identified **2,611 potential duplicate pairs** within the dataset. As part of our solution, we then classified them into the following categories:
 
 - Standard duplicates (same individuals with multiple records)  - **SD**
 - Duplicates caused by **marriage/separation**  - **MS**
-- Cases involving **Multible births**  - **T**
+- Cases involving **Multible births or family members**  - **T**
 - Non duplicates - **ND**
 
 We prioritize accuracy to ensure our solution flags true duplicates while minimizing the risk of incorrectly identifying separate individuals. 
+<br>
 This minimizes the need for manual review and ensures data integrity.
 
 **Our solution depicts high accuracy for each category 90%, 91%, 98%, and 94%, respectively.** 
 
-#### *“The average duplicate rate within healthcare organizations is 18%”- Verato*
+#### *“The average duplicate rate within healthcare organizations is 18%”- [Verato](https://verato.com/blog/three-hidden-costs-of-duplicate-records/#:~:text=According%20to%20a%20recent%20Black,fall%20into%20three%20primary%20categories.)*
 
 Our solution can deliver a powerful impact on healthcare organizations by:
 
@@ -114,9 +115,9 @@ The total amount of active records analysed was **6,455,829**.
   - Highest age rate: 18-32 years old
 
 **References:**  
-- *Studies aligning with race and sex distribution findings for twins.*  
+**Studies aligning with race and sex distribution findings for twins:**  
 - The twin birth rate in the United States in 2022 was 31.2 twins per 1,000 births. The twin birth rate rose for Black women from 40.6 in 2021 to 41.4 in 2022.  The twin birth rate remained essentially unchanged for White women (32.5 to 32.6) and Hispanic women (24.2 to 24.5). ( National Vital Statistics Reports - Volume 73, Number 2 April 4, 2024 )
-- Data births of twins peakes aroud 2000s as depicted by the age of twins duplicates (https://www.cdc.gov/nchs/data/databriefs/db351-h.pdf)
+- Data births of twins peakes aroud 2000s as depicted by the age of [twins duplicates](https://www.cdc.gov/nchs/data/databriefs/db351-h.pdf)
 - The higher proportion of female twins compared to male twins is influenced by several biological factors:
 
     1. **In-Utero Survival Rates**: Male fetuses generally have higher in-utero mortality rates than female fetuses. This disparity is more pronounced in twin pregnancies, leading to a higher proportion of surviving female twins. [Learn more on Wikipedia](https://en.wikipedia.org/wiki/Twin).
