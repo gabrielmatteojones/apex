@@ -21,7 +21,7 @@ We prioritize accuracy to ensure our solution flags true duplicates while minimi
 <br>
 This minimizes the need for manual review and ensures data integrity.
 
-**Our solution depicts high accuracy for each category 90%, 91%, 98%, and 94%, respectively.** 
+**Our solution depicts high accuracy for each category 89%, 91%, 98%, and 96%, respectively.** 
 
 #### *“The average duplicate rate within healthcare organizations is 18%”- [Verato](https://verato.com/blog/three-hidden-costs-of-duplicate-records/#:~:text=According%20to%20a%20recent%20Black,fall%20into%20three%20primary%20categories.)*
 
