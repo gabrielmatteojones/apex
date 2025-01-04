@@ -10,7 +10,7 @@ At RootSquare.io, we specialize in advanced data cleansing solutions specificall
     
      
 
-To demonstrate the effectiveness of our solution in a real-world scenario, we applied it to the **North Carolina Voter Registration Database**. This publicly available dataset allowed us to rigorously test our methodologies for identifying duplicate persons. Our solution successfully identified **2,611 potential duplicate pairs** within the dataset. As part of our solution, we then classified them into the following categories:
+To demonstrate the effectiveness of our solution in a real-world scenario, we applied it to the **North Carolina Voter Registration Database**. This publicly available dataset allowed us to rigorously test our methodologies for identifying duplicate persons. Our solution successfully identified **2,607 potential duplicate pairs** within the dataset. As part of our solution, we then classified them into the following categories:
 
 - Standard duplicates (same individuals with multiple records)  - **SD**
 - Duplicates caused by **marriage/separation**  - **MS**
