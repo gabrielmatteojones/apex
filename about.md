@@ -3,19 +3,17 @@ layout: post
 title: About
 ---
 
-### Our mission is to empower institutions with cleaner, more accurate data, enabling better operational insights.
 
+### With years of experience in data analysis, we understand the critical value of clean, reliable data for effective decision-making. Our mission is to empower institutions with cleaner, more accurate data, enabling improved operational insights. 
 #### Our Product
 
-- Removes duplicates
-- Generates unique IDs.
+- Removes duplicate records
+- Generates unique identifiers.
 
 ### RootSquare uses advanced record linkage technology
-- Advanced matching algorithm using large language models
-- Domain agnostic architecture (e.g., match on any characteristic)
-- Automated processes for the detection of duplicates across databases
-- Use of machine learning models to detect duplicates
-- Automated model improvement and personalization to specific institutions and regions
 
-
-
+- Advanced matching algorithms using large language models
+- Domain-agnostic architecture (e.g., matching on any attribute)
+- Automated processes for duplicate detection across databases
+- Use of machine learning models for duplicate detection
+- Automated model refinement and personalization for specific institutions and regions

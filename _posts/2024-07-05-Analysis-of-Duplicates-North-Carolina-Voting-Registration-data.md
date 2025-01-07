@@ -69,7 +69,7 @@ The total amount of active records analysed was **6,455,829**.
   - Higest race rate: W, B (White, Black) 
   - Highest party rate: UNA-UNA, Dem-Dem (Democrats)  
 
----
+
 
 ### 3. Duplicates from Marriage/Separation  
 
@@ -91,7 +91,7 @@ The total amount of active records analysed was **6,455,829**.
   - Higest race rate: W, B (White, Black) 
   - Highest party rate: Dem-Dem, UNA-UNA (Democrats)   
   
----
+
 
 ### 4. Twins  
 
@@ -125,7 +125,7 @@ The total amount of active records analysed was **6,455,829**.
     2. **Sex Ratio at Birth**: While the natural sex ratio at birth slightly favors males (approximately 105 males for every 100 females), the increased male fetal mortality in twin pregnancies results in a more balanced or slightly female-skewed sex ratio among twins. [Learn more on Wikipedia](https://en.wikipedia.org/wiki/Twin).
 
 
----
+
 
 Rootsquare.io’s solution demonstrates unparalleled accuracy in identifying duplicates across diverse datasets. This analysis highlights the potential of our tools to streamline database management and improve data integrity.
 
