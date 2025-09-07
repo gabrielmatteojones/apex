@@ -1,0 +1,293 @@
+// _sass/custom/_home.scss
+
+$brand-color: #FFF9F2; // IMPORTANT: Replace with your site's background color
+
+.home-container {
+  display: grid;
+  // This 3-column grid prioritizes the center column at 28em width.
+  // The side columns will shrink to 0 if needed to accommodate the center column,
+  // but will expand equally when there's extra space available.
+  grid-template-columns: minmax(0, 1fr) minmax(auto, calc(28 * $root-font-size)) minmax(0, 1fr);
+  align-items: start;
+  width: 100%;
+  padding: calc(2 * $root-font-size) 0; // Vertical padding only
+}
+
+.side-panel {
+  grid-column: 1 / 2;
+  justify-self: end;
+  margin-right: calc(3 * $root-font-size);
+  font-weight: lighter;
+
+  max-width: calc(15 * $root-font-size);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .logo img {
+    height: calc(5.75 * $root-font-size);
+    width: auto;
+    margin: 0;
+  }
+
+  .menu {
+    margin-top: calc(3 * $root-font-size);
+    width: 100%;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: right;
+    }
+
+    li {
+      margin-bottom: calc(-0.25 * $root-font-size);
+    }
+
+    a {
+      font-size: calc(1.67 * $root-font-size);
+      text-decoration: none;
+      color: inherit;
+      transition: color .5s ease;
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+  }
+
+  .search {
+    width: 100%;
+    text-align: right;
+    padding-top: 1rem;
+
+    #search {
+      text-align: right;
+      padding: 0;
+    }
+
+    #search__input {
+      text-align: right;
+      padding: 0.5em 0;
+    }
+  }
+  
+}
+
+.middle-panel {
+  grid-column: 2 / 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+blog-header {
+  width: 100%;
+  text-align: center;
+  height: calc(8.75 * $root-font-size);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-title {
+  width: 100%;
+  font-size: calc(2.5 * $root-font-size);
+  margin: 0 auto;
+  height: calc(5.75 * $root-font-size);
+  display: flex;
+  align-items: flex-end;  /* Changed from 'center' to 'flex-end' */
+  justify-content: center;
+  font-family: $font-family-display;
+}
+
+.divider {
+  scale: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(3 * $root-font-size);
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, calc(13 * $root-font-size));
+  justify-content: center;
+  gap: calc(1 * $root-font-size) calc(2 * $root-font-size);
+  width: 100%;
+}
+
+.post-card {
+  font-family: $font-family-display;
+  position: relative;
+  width: calc(13 * $root-font-size);
+  height: calc(7.25 * $root-font-size);
+  padding-top: 0;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    position: relative;
+  }
+
+  .post-card-image {
+    position: absolute;
+    top: 1em;
+    left: 3em;
+    right: 3em;
+    max-height: 45%;
+    overflow: hidden; 
+    z-index: -1;
+  
+    img {
+      width: 100%;   /* Ensures the image always fits the container's width */
+      height: 100%;  /* Maintains the image's aspect ratio, preventing horizontal distortion */
+      display: block;
+      margin: 0;
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: calc(1 * $root-font-size);
+      background: linear-gradient(to top,
+        $brand-color,
+        rgba($brand-color, 0.9) 20%,
+        rgba($brand-color, 0.5) 50%,
+        rgba($brand-color, 0.2) 75%,
+        transparent
+      );
+    }
+  }
+  
+
+  .post-card-content {
+    position: absolute;
+    left: calc(1 * $root-font-size);
+    right: calc(1 * $root-font-size);
+    bottom: calc(0.5 * $root-font-size);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(0.2 * $root-font-size);
+  }
+
+  .post-card-title {
+    font-size: calc(1.11 * $root-font-size);
+    margin: 0;
+    font-weight: normal;
+    text-shadow: 0 0 calc(1.5 * $root-font-size) rgba($brand-color, 1);
+    line-height: 1.15;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  .post-card-date {
+    font-size: calc(0.67 * $root-font-size);
+    color: $muted-text-color;
+    margin: 0;
+  }
+}
+
+// Pagination Navigation Styles
+.pagination-nav {
+  margin-top: calc(3 * $root-font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: calc(1.5 * $root-font-size);
+  padding: calc(0.75 * $root-font-size) calc(1.5 * $root-font-size);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: calc(0.5 * $root-font-size);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  max-width: calc(30 * $root-font-size);
+  margin: 0 auto;
+}
+
+.pagination-btn {
+  display: flex;
+  align-items: center;
+  gap: calc(0.25 * $root-font-size);
+  padding: calc(0.5 * $root-font-size) calc(0.75 * $root-font-size);
+  font-size: calc(0.89 * $root-font-size);
+  text-decoration: none;
+  color: $text-color;
+  border-radius: calc(0.25 * $root-font-size);
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  justify-self: center;
+
+  &:hover:not(.disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+  }
+
+  &.disabled {
+    color: $muted-text-color;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &.pagination-prev {
+    justify-self: end;
+  }
+
+  &.pagination-next {
+    justify-self: start;
+  }
+
+  span {
+    font-size: calc(0.78 * $root-font-size);
+    font-weight: bold;
+  }
+}
+
+.pagination-info {
+  display: flex;
+  align-items: center;
+  gap: calc(0.25 * $root-font-size);
+  font-size: calc(0.89 * $root-font-size);
+  color: $text-color;
+  padding: 0 calc(0.5 * $root-font-size);
+  justify-self: center;
+  grid-column: 2;
+}
+
+.pagination-current {
+  color: $muted-text-color;
+}
+
+.pagination-separator {
+  color: $muted-text-color;
+}
+
+.pagination-total {
+  color: $muted-text-color;
+}

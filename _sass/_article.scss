@@ -1,29 +1,155 @@
+/* Main 3-column grid layout for the article */
 .post {
-  background: white;
-  margin: 2em auto;
-  max-width: 60rem;
-  padding: 2em 0;
-  box-shadow: 12px 18px 24px rgba(darken($brand-color, 50%), .1);
+  padding-top: 0.5em;
+  display: grid;
+  grid-template-columns: calc(11 * $root-font-size) minmax(auto, calc(28 * $root-font-size)) calc(11 * $root-font-size);
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  grid-auto-rows: auto;
+  row-gap: calc(0.75 * $root-font-size);
+  column-gap: 4rem;
 }
 
-.post > * {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 36rem;
-  padding: 0 1em;
+/* === CENTER COLUMN (Main Content) === */
+
+/* Grid placement for elements in the middle column */
+.post > .menu { grid-column: 2 / 3; grid-row: 1; }
+.post > .post-title { grid-column: 2 / 3; grid-row: 2; }
+
+/* Place the new container on row 3 */
+.post > .article-body-container { grid-column: 2 / 3; grid-row: 3; }
+
+/* The .post-meta follows the container on row 4 */
+.post > .post-meta { grid-column: 2 / 3; grid-row: 4; }
+
+/* Top navigation menu */
+.post > .menu {
+  justify-self: start;
+  align-self: start;
+  margin: calc(0.5 * $root-font-size) 0 0;
+  padding: 0;
+  width: 100%;
 }
 
-.post > h1 {
-  font-size: 2em;
-  max-width: 48rem;
-  padding: 2em 1em;
-  text-align: center;
+.post > .menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1em;
 }
+
+.post > .menu a {
+  text-decoration: none;
+  color: inherit;
+  font-family: $font-family;
+  font-variant: small-caps;
+  font-size: calc(1.11 * $root-font-size);
+  white-space: nowrap;
+}
+
+/* Post title */
+.post > h1.post-title {
+  font-family: "PP Editorial Old";
+  font-size: calc(2.5 * $root-font-size);
+  margin: 0;
+  padding: calc(2.5 * $root-font-size) 0 0 0;
+  text-align: left;
+}
+
+/* Intro paragraph styling (selector updated) */
+.post .intro {
+  color: $subtle-text-color;
+  font-family: $font-family-italic;
+  font-size: calc(0.83 * $root-font-size);
+  text-indent: 0;
+  margin: 0.5em 0 2.5em; /* Adds space between intro and content */
+  padding: 0;
+}
+
+/* === LEFT COLUMN (Logo and TOC) === */
+
+.post > .post-logo-left {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  justify-self: end;
+  margin-top: calc(0.6 * $root-font-size);
+}
+
+.post > .post-logo-left img {
+  height: calc(1.11 * $root-font-size);
+  width: auto;
+  margin: 0;
+  display: block;
+  object-fit: contain;
+}
+
+/* TOC aligns with the start of the article body container */
+.post > .post-toc-left {
+  grid-column: 1 / 2;
+  grid-row: 3;
+  justify-self: end;
+  align-self: start;
+}
+
+/* General TOC styling */
+.post .toc {
+  color: $subtle-text-color;
+  margin-top: 0;
+  text-align: right;
+}
+
+.post .toc-title {
+  font-family: $font-family-bold;
+  font-size: 1.33rem;
+  margin: 0 0 .5em;
+}
+
+.post .toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post .toc-list a {
+  color: inherit;
+  text-decoration: none;
+  font-family: $font-family;
+}
+
+.post .toc-list li { margin: .25em 0; }
+.post .toc-list li.toc-level-1 a { font-size: 1.11rem; }
+.post .toc-list li.toc-level-2 a { font-size: 1rem; }
+.post .toc-list li.toc-level-3 a { font-size: 0.83rem; }
+
+/* === RIGHT COLUMN === */
+
+.post .post-side-right {
+  grid-column: 3 / 4;
+  grid-row: 2 / -1;
+  justify-self: start;
+}
+
+/* === GENERAL ARTICLE BODY STYLES === */
+
+.post .post-content h1,
+.post .post-content h2,
+.post .post-content h3,
+.post .post-content h4,
+.post .post-content h5,
+.post .post-content h6 {
+  font-family: "PP Editorial Old";
+}
+
+.post .post-content h1 { font-size: calc(1.67 * $root-font-size); }
+.post .post-content h2 { font-size: calc(1.33 * $root-font-size); }
+.post .post-content h3 { font-size: calc(1.11 * $root-font-size); }
 
 .post p {
-  text-align: justify;
-  text-indent: 1.5em;
+  text-align: left;
   text-justify: inter-word;
+  padding-bottom: 1.25rem;
 }
 
 .post p:first-of-type,
@@ -35,19 +161,23 @@
   background: $highlight;
 }
 
-.post dl,
-.post ul,
-.post ol {
+.post em, .post i {
+  font-family: $font-family;
+  font-style: italic;
+}
+
+.post strong, .post b {
+  font-family: $font-family;
+  font-weight: 700;
+}
+
+.post dl, .post ul, .post ol {
   margin: 1.5em;
 }
 
 .post li {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-}
-
-.post-content:first-child {
-  margin-top: 4em;
 }
 
 .post-meta {
@@ -58,8 +188,110 @@
 
 .back-link {
   display: inline-block;
-  font-size: .75em;
+  font-size: calc(0.75 * $root-font-size);
   padding: 1em;
   text-decoration: none;
   text-transform: uppercase;
 }
+
+/* === BIBLIOGRAPHY COMPONENT === */
+
+.post .bibliography {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid #e0e0e0; /* A subtle separator line */
+  color: $subtle-text-color;
+}
+
+.post .bibliography-title {
+  font-family: $font-family-bold;
+  font-size: 1rem;
+  font-variant: small-caps;
+  text-align: left;
+  text-indent: 0;
+  margin-bottom: 1em;
+  color: $subtle-text-color;
+}
+
+.post .bibliography-list {
+  list-style-type: none; /* Removes the bullet points */
+  margin: 0;            /* Removes the default list indentation */
+  padding: 0;
+  text-align: left;
+}
+
+
+.post .bibliography-list li {
+  margin-bottom: 0.25rem;
+  padding-left: 0rem;
+}
+
+.post .bibliography-list a {
+  color: inherit; /* Inherits the subtle text color */
+  text-decoration: none;
+  border-bottom: 1px solid transparent; /* Prepare for hover effect */
+  font-size: 0.83rem;
+}
+
+.post .bibliography-list a:hover {
+  background: none; /* Override general link hover */
+  border-bottom-color: $subtle-text-color; /* Underline on hover */
+}
+
+/* === SIDENOTE STYLING === */
+
+/* The main content container needs to be a positioning context */
+.article-body-container {
+  position: relative;
+}
+
+/* The sidenote itself */
+.sidenote {
+  width: calc(11 * $root-font-size); /* Match the width of your right column */
+  font-size: 0.83rem;
+  line-height: 1.4;
+  color: $subtle-text-color;
+  
+  /* These are set by JS, but defaults are good */
+  position: absolute;
+  
+  /* Prevents sidenotes from overlapping the main text */
+  box-sizing: border-box;
+  padding-left: 2em; 
+}
+
+/* Style the footnote number in the main text to be less intrusive */
+.post sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  font-size: 0.8em;
+  color: $subtle-text-color;
+}
+
+.post a[href^="#fn-"] {
+  text-decoration: none;
+  border-bottom: none;
+}
+.post a[href^="#fn-"]:hover {
+  background: none;
+  color: #000; /* Or your main text color */
+}
+
+/* === BLOCKQUOTE STYLING === */
+
+.post blockquote {
+  font-style: italic;
+  font-family: $font-family-italic; /* Uses the italic font you have defined elsewhere */
+  color: $muted-text-color;       /* Matches the color of your intro text and TOC */
+  
+  margin: 0.5em 0;              /* Adds vertical and horizontal spacing */
+  //padding-left: 1.5em;            /* Creates space between the border and the text */
+  //border-left: 3px solid #e0e0e0; /* A subtle decorative left border */
+}
+
+/* Ensures paragraphs inside blockquotes don't have the standard text-indent */
+.post blockquote p {
+  text-indent: 0;
+}
+
