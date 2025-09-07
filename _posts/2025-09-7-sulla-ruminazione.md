@@ -3,7 +3,7 @@ title: Sulla Ruminazione
 category: psychology
 layout: post
 image: /assets/images/rumination.png
-intro: Una veloce panoramica su cos'è la ruminazione, perché è pericolosa e come interromperla.
+intro: Una veloce panoramica su cos'è la ruminazione, perché è pericolosa e come interromperla. Ovviamente NON sono uno specialista; solo una persona che ha fatto uso di terapia comportamentale. Informazioni raccolte da varie fonti che reputo affidabili e parzialmente affidabili.
 ---
 
 # Introduzione

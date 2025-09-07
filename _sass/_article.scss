@@ -1,29 +1,35 @@
+/* Main 3-column grid layout for the article */
 .post {
   padding-top: 0.5em;
   display: grid;
-  grid-template-columns: calc(11.5 * $root-font-size) minmax(auto, calc(28 * $root-font-size)) calc(11.5 * $root-font-size);
+  grid-template-columns: calc(11 * $root-font-size) minmax(auto, calc(28 * $root-font-size)) calc(11 * $root-font-size);
   align-items: start;
   justify-content: center;
   width: 100%;
+  grid-auto-rows: auto;
+  row-gap: calc(0.75 * $root-font-size);
+  column-gap: 4rem;
 }
 
-/* Center the title and body in the middle column */
-.post > .post-title,
-.post > .post-content,
-.post > .post-meta,
-.post > .divided {
-  grid-column: 2 / 3;
-}
+/* === CENTER COLUMN (Main Content) === */
 
-/* Horizontal textbox-style menu above the title, left-aligned in center column */
+/* Grid placement for elements in the middle column */
+.post > .menu { grid-column: 2 / 3; grid-row: 1; }
+.post > .post-title { grid-column: 2 / 3; grid-row: 2; }
+
+/* Place the new container on row 3 */
+.post > .article-body-container { grid-column: 2 / 3; grid-row: 3; }
+
+/* The .post-meta follows the container on row 4 */
+.post > .post-meta { grid-column: 2 / 3; grid-row: 4; }
+
+/* Top navigation menu */
 .post > .menu {
-  grid-column: 2 / 3;
   justify-self: start;
   align-self: start;
   margin: calc(0.5 * $root-font-size) 0 0;
   padding: 0;
   width: 100%;
-  text-align: left;
 }
 
 .post > .menu ul {
@@ -31,8 +37,6 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-end;
   gap: 1em;
 }
 
@@ -45,44 +49,90 @@
   white-space: nowrap;
 }
 
-/* Optional side panels (empty by default) */
-.post .post-side-left {
-  grid-column: 1 / 2;
-  justify-self: end;
-  margin-right: 2em;
-}
-
-.post .post-side-left .logo {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: calc(0.6 * $root-font-size);
-}
-
-.post .post-side-left .logo img {
-  height: calc(1.11 * $root-font-size);
-  width: auto;
-  display: block;
-  object-fit: contain;
-  margin: 0;
-}
-
-.post .post-side-right {
-  grid-column: 3 / 4;
-  justify-self: start;
-  margin-left: 2em;
-}
-
-/* Remove legacy centering to let the grid govern layout */
-
-.post > h1 {
+/* Post title */
+.post > h1.post-title {
   font-family: "PP Editorial Old";
   font-size: calc(2.5 * $root-font-size);
   margin: 0;
-  padding: calc(2.5 * $root-font-size) 0 calc(1 * $root-font-size);
+  padding: calc(2.5 * $root-font-size) 0 0 0;
   text-align: left;
 }
 
-/* Headings inside the article body (exclude the top title) */
+/* Intro paragraph styling (selector updated) */
+.post .intro {
+  color: $subtle-text-color;
+  font-family: $font-family-italic;
+  font-size: calc(0.83 * $root-font-size);
+  text-indent: 0;
+  margin: 0.5em 0 2.5em; /* Adds space between intro and content */
+  padding: 0;
+}
+
+/* === LEFT COLUMN (Logo and TOC) === */
+
+.post > .post-logo-left {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  justify-self: end;
+  margin-top: calc(0.6 * $root-font-size);
+}
+
+.post > .post-logo-left img {
+  height: calc(1.11 * $root-font-size);
+  width: auto;
+  margin: 0;
+  display: block;
+  object-fit: contain;
+}
+
+/* TOC aligns with the start of the article body container */
+.post > .post-toc-left {
+  grid-column: 1 / 2;
+  grid-row: 3;
+  justify-self: end;
+  align-self: start;
+}
+
+/* General TOC styling */
+.post .toc {
+  color: $subtle-text-color;
+  margin-top: 0;
+  text-align: right;
+}
+
+.post .toc-title {
+  font-family: $font-family-bold;
+  font-size: 1.33rem;
+  margin: 0 0 .5em;
+}
+
+.post .toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post .toc-list a {
+  color: inherit;
+  text-decoration: none;
+  font-family: $font-family;
+}
+
+.post .toc-list li { margin: .25em 0; }
+.post .toc-list li.toc-level-1 a { font-size: 1.11rem; }
+.post .toc-list li.toc-level-2 a { font-size: 1rem; }
+.post .toc-list li.toc-level-3 a { font-size: 0.83rem; }
+
+/* === RIGHT COLUMN === */
+
+.post .post-side-right {
+  grid-column: 3 / 4;
+  grid-row: 2 / -1;
+  justify-self: start;
+}
+
+/* === GENERAL ARTICLE BODY STYLES === */
+
 .post .post-content h1,
 .post .post-content h2,
 .post .post-content h3,
@@ -95,30 +145,11 @@
 .post .post-content h1 { font-size: calc(1.67 * $root-font-size); }
 .post .post-content h2 { font-size: calc(1.33 * $root-font-size); }
 .post .post-content h3 { font-size: calc(1.11 * $root-font-size); }
-.post .post-content h4,
-.post .post-content h5,
-.post .post-content h6 { font-size: $root-font-size; }
 
 .post p {
   text-align: justify;
   text-indent: 1.5em;
   text-justify: inter-word;
-}
-
-/* Intro paragraph variant */
-.post .intro {
-  color: $subtle-text-color;
-  font-family: $font-family;
-  font-size: calc(0.83 * $root-font-size);
-  font-family: $font-family-italic;
-  text-indent: 0;
-}
-
-/* Place intro under title in center column with clean spacing */
-.post > .intro {
-  grid-column: 2 / 3;
-  margin: 0 0 calc(1 * $root-font-size);
-  padding: 0;
 }
 
 .post p:first-of-type,
@@ -130,32 +161,23 @@
   background: $highlight;
 }
 
-/* Ensure body emphasis uses Junicode variants */
-.post em,
-.post i {
+.post em, .post i {
   font-family: $font-family;
   font-style: italic;
 }
 
-.post strong,
-.post b {
+.post strong, .post b {
   font-family: $font-family;
   font-weight: 700;
 }
 
-.post dl,
-.post ul,
-.post ol {
+.post dl, .post ul, .post ol {
   margin: 1.5em;
 }
 
 .post li {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-}
-
-.post-content:first-child {
-  margin-top: 4em;
 }
 
 .post-meta {

@@ -16,7 +16,7 @@ $brand-color: #FFF9F2; // IMPORTANT: Replace with your site's background color
 .side-panel {
   grid-column: 1 / 2;
   justify-self: end;
-  margin-right: calc(2 * $root-font-size);
+  margin-right: calc(3 * $root-font-size);
   font-weight: lighter;
 
   max-width: calc(15 * $root-font-size);
