@@ -44,6 +44,20 @@ layout: default
     <div class="post-content e-content" itemprop="articleBody">
       {{ content }}
     </div>
+
+    <!-- ADD THE BIBLIOGRAPHY COMPONENT HERE -->
+    {% if page.bibliography %}
+      <section class="bibliography">
+        <h3 class="bibliography-title">Bibliography</h3>
+        <!-- CHANGE this from <ol> to <ul> -->
+        <ul class="bibliography-list">
+          {% for item in page.bibliography %}
+            <li><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+    <!-- END BIBLIOGRAPHY COMPONENT -->
   </div>
 
   <div class="post-meta">
@@ -92,5 +106,74 @@ layout: default
       list.appendChild(li);
     });
   })();
-  </script>
+</script>
+  
+<!-- Final, Corrected Sidenote Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const contentContainer = document.querySelector('.article-body-container');
+    if (!contentContainer) return;
+  
+    const footnoteContainer = document.querySelector('.footnotes');
+    if (!footnoteContainer) return;
+  
+    // Find all footnote references in the text
+    const footnoteReferences = Array.from(contentContainer.querySelectorAll('a[href^="#fn:"]'));
+  
+    footnoteReferences.forEach(refLink => {
+      const footnoteId = refLink.getAttribute('href').substring(1);
+      const footnoteContentElement = document.getElementById(footnoteId);
+  
+      if (footnoteContentElement) {
+        // --- NEW LOGIC STARTS HERE ---
+
+        // 1. Get the footnote number from the link's text content.
+        const footnoteNumber = refLink.textContent;
+        const numberText = `${footnoteNumber}. `;
+
+        // 2. Remove the back-arrow link from the footnote definition.
+        const backlink = footnoteContentElement.querySelector('a[href^="#fnref:"]');
+        if (backlink) {
+          backlink.remove();
+        }
+
+        // 3. Prepend the number to the content.
+        // This checks if the footnote content is wrapped in a <p> tag.
+        const firstParagraph = footnoteContentElement.querySelector('p');
+        if (firstParagraph) {
+          // If it is, insert the number inside the paragraph to avoid a line break.
+          firstParagraph.innerHTML = numberText + firstParagraph.innerHTML;
+        } else {
+          // Otherwise, just prepend it to the whole content.
+          footnoteContentElement.innerHTML = numberText + footnoteContentElement.innerHTML;
+        }
+
+        // --- NEW LOGIC ENDS HERE ---
+
+        // Create the sidenote element
+        const sidenote = document.createElement('aside');
+        sidenote.className = 'sidenote';
+        sidenote.setAttribute('data-sidenote-for', footnoteId);
+        
+        // Use the modified content that now includes the number
+        sidenote.innerHTML = footnoteContentElement.innerHTML;
+        
+        // Get the position of the footnote reference
+        const refPosition = refLink.getBoundingClientRect();
+        const containerPosition = contentContainer.getBoundingClientRect();
+  
+        // Position the sidenote vertically aligned with the reference
+        sidenote.style.position = 'absolute';
+        sidenote.style.top = `${refPosition.top - containerPosition.top}px`;
+        sidenote.style.left = '105%';
+  
+        contentContainer.appendChild(sidenote);
+      }
+    });
+  
+    // Hide the original footnote section at the bottom
+    footnoteContainer.style.display = 'none';
+  });
+</script>
+
   

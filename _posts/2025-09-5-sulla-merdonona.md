@@ -2,7 +2,7 @@
 title: Sulla Merdona
 category: psychology
 layout: post
-image: /assets/images/rumination.png
+image: /assets/images/llm.png
 ---
 
 # Introduzione

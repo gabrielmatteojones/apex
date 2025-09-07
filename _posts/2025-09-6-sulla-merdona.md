@@ -1,8 +1,7 @@
 ---
-title: Sulla Merdona
+title: Sulla MerdonaOna
 category: psychology
 layout: post
-image: /assets/images/rumination.png
 ---
 
 # Introduzione

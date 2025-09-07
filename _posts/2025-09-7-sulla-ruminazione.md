@@ -4,16 +4,41 @@ category: psychology
 layout: post
 image: /assets/images/rumination.png
 intro: Una veloce panoramica su cos'è la ruminazione, perché è pericolosa e come interromperla. Ovviamente NON sono uno specialista; solo una persona che ha fatto uso di terapia comportamentale. Informazioni raccolte da varie fonti che reputo affidabili e parzialmente affidabili.
+bibliography:
+  - name: "Rosenbaum, D., et al. (2018). Neurophysiological correlates of the attention training technique."
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6039840/"
+  - name: "Article from ScienceDirect"
+    url: "https://www.sciencedirect.com/science/article/pii/S1077722900800516"
+  - name: "Article from LWW Journals (1)"
+    url: "https://journals.lww.com/10.4103/jehp.jehp_1720_23"
+  - name: "Article from LWW Journals (2)"
+    url: "https://journals.lww.com/10.4103/jehp.jehp_1552_22"
+  - name: "Article from PNAS"
+    url: "https://www.pnas.org/doi/10.1073/pnas.1510459112"
+  - name: "PDF Article from SUMS"
+    url: "https://intjsh.sums.ac.ir/article_50742_f51147821ddb6ff616c83cba672848e6.pdf"
+  - name: "Metacognitive Therapy Central"
+    url: "https://metacognitivetherapycentral.com/what-is-rumination-and-how-to-stop-it-according-to-mct/"
+  - name: "Article from PMC (2)"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2908437/"
+  - name: "Article from LWW Journals (3)"
+    url: "https://journals.lww.com/10.4103/jehp.jehp_1783_22"
+  - name: "Article from Springer Link"
+    url: "https://link.springer.com/10.1007/s10826-020-01711-7"
+  - name: "Article from Nature"
+    url: "https://www.nature.com/articles/s41598-020-64577-1"
+  - name: "Article from PMC (3)"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10654545/"
 ---
 
 # Introduzione
 
-> [!quote] **Definizione:** 
+> **Definizione:** 
 > La **ruminazione** è una forma di pensiero persistente, circolare e depressivo, che rivolge la propria attenzione al fatto di avere un umore negativo, ai sintomi di tale condizione, alle cause, ai significati e alle conseguenze.
 
-Quando ti ossessioni con qualcosa. Quando non riesci a pensare altrimenti. Quando cammini, significante dopo significante, lungo un percorso di pensieri negativo, funesto, depressivo, distruttivo, oscuro – e circolare.
+Quando ti ossessioni con qualcosa[^1]. Quando non riesci a pensare altrimenti. Quando cammini, significante dopo significante, lungo un percorso di pensieri negativo, funesto, depressivo, distruttivo, oscuro – e circolare.
 
-Solo che non circoli su un piano, ma scendi sempre più in basso – abbassamento dell'umore, poi depressione, possibilmente PTSD. Il cervello é in uno stato di panico. Non é sotto controllo. In quei casi, la psicoterapia comportamentale é poco efficace.
+Solo che non circoli su un piano, ma scendi sempre più in basso – abbassamento dell'umore, poi depressione, possibilmente PTSD. Il cervello é in uno stato di panico. Non é sotto controllo. In quei casi, la psicoterapia comportamentale é poco efficace.[^2]
 
 Non solo – l'attività di ruminazione in un paziente é un forte predittore di episodi e sintomi depressivi, abuso di sostanze, abuso di alcool, disturbi alimentari, sintomi da PTSD nei 5 anni a venire. E questo interferisce con la psicoterapia ulteriormente.
 
@@ -102,7 +127,7 @@ Infine, possiamo migliorare il nostro contesto. Il contesto **influisce** sul no
 
 Il punto d'entrata perfetto al miglioramento è proprio migliorare il contesto. Perchè aumenti le tue possibilità di successo, e ti concentri su risolvere il problema creando un cambiamento sempre più evidente – placcando la ruminazione.
 
-# Alcune pratiche
+## Alcune pratiche
 
 **La meditazione del pensiero successivo.** Calma gli effetti negativi sulle emozioni.
    
@@ -201,17 +226,5 @@ Il punto d'entrata perfetto al miglioramento è proprio migliorare il contesto. 
   
   Non aspettare di "_sentirti meglio_" per agire. L'azione viene prima del miglioramento dell'umore.
 
-****
-
-1. [https://pmc.ncbi.nlm.nih.gov/articles/PMC6039840/](https://pmc.ncbi.nlm.nih.gov/articles/PMC6039840/)
-2. [https://www.sciencedirect.com/science/article/pii/S1077722900800516](https://www.sciencedirect.com/science/article/pii/S1077722900800516)
-3. [https://journals.lww.com/10.4103/jehp.jehp_1720_23](https://journals.lww.com/10.4103/jehp.jehp_1720_23)
-4. [https://journals.lww.com/10.4103/jehp.jehp_1552_22](https://journals.lww.com/10.4103/jehp.jehp_1552_22)
-5. [https://www.pnas.org/doi/10.1073/pnas.1510459112](https://www.pnas.org/doi/10.1073/pnas.1510459112)
-6. [https://intjsh.sums.ac.ir/article_50742_f51147821ddb6ff616c83cba672848e6.pdf](https://intjsh.sums.ac.ir/article_50742_f51147821ddb6ff616c83cba672848e6.pdf)
-7. [https://metacognitivetherapycentral.com/what-is-rumination-and-how-to-stop-it-according-to-mct/](https://metacognitivetherapycentral.com/what-is-rumination-and-how-to-stop-it-according-to-mct/)
-8. [https://pmc.ncbi.nlm.nih.gov/articles/PMC2908437/](https://pmc.ncbi.nlm.nih.gov/articles/PMC2908437/)
-9. [https://journals.lww.com/10.4103/jehp.jehp_1783_22](https://journals.lww.com/10.4103/jehp.jehp_1783_22)
-10. [https://link.springer.com/10.1007/s10826-020-01711-7](https://link.springer.com/10.1007/s10826-020-01711-7)
-11. [https://www.nature.com/articles/s41598-020-64577-1](https://www.nature.com/articles/s41598-020-64577-1)
-12. [https://pmc.ncbi.nlm.nih.gov/articles/PMC10654545/](https://pmc.ncbi.nlm.nih.gov/articles/PMC10654545/)
+[^1]: This is the content for the first sidenote. It can be a short sentence.
+[^2]: Or it can be a longer one with multiple sentences. The layout should ideally handle this gracefully.

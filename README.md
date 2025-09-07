@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Hitchens"
+title: "carruc.eu"
 ---
 
-An inarguably well-designed [Jekyll](http://jekyllrb.com) theme by [Pat Dryburgh](https://patdryburgh.com).
+Based on an inarguably well-designed [Jekyll](http://jekyllrb.com) theme by [Pat Dryburgh](https://patdryburgh.com).
