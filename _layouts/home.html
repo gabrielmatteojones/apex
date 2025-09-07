@@ -50,5 +50,38 @@ layout: default
         </article>
       {% endfor %}
     </div>
+
+    <!-- Pagination Navigation -->
+    {% if paginator.total_pages > 1 %}
+      <nav class="pagination-nav">
+        <div class="pagination-container">
+          {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-btn pagination-prev">
+              <span>←</span> Previous
+            </a>
+          {% else %}
+            <span class="pagination-btn pagination-prev disabled">
+              <span>←</span> Previous
+            </span>
+          {% endif %}
+
+          <div class="pagination-info">
+            <span class="pagination-current">{{ paginator.page }}</span>
+            <span class="pagination-separator">of</span>
+            <span class="pagination-total">{{ paginator.total_pages }}</span>
+          </div>
+
+          {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-btn pagination-next">
+              Next <span>→</span>
+            </a>
+          {% else %}
+            <span class="pagination-btn pagination-next disabled">
+              Next <span>→</span>
+            </span>
+          {% endif %}
+        </div>
+      </nav>
+    {% endif %}
   </main>
 </div>
