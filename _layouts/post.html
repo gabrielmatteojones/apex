@@ -2,18 +2,33 @@
 layout: default
 ---
 
-{% if site.data.menu %}
-  {% include menu.html %}
-{% else %}
-  {% include back-link.html %}
-{% endif %}
+{% comment %} navbar removed on post pages {% endcomment %}
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" id="main" role="article" aria-label="Content">
+  <aside class="post-side-left">
+    <div class="logo">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/carruc-eu-logo-inline.png' | relative_url }}" alt="carruc.eu logo inline">
+      </a>
+    </div>
+  </aside>
+  
+  <nav class="menu">
+    <ul>
+      {% for item in site.data.menu %}
+          <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </ul>
+  </nav>
 
   {% if page.title != "" %}
-    <h1 class="post-title divided p-name" itemprop="name headline">
+    <h1 class="post-title p-name" itemprop="name headline">
       {{ page.title }}
     </h1>
+  {% endif %}
+
+  {% if page.intro %}
+    <p class="intro">{{ page.intro }}</p>
   {% endif %}
 
   <div class="post-content e-content" itemprop="articleBody">

@@ -2,14 +2,19 @@ $brand-color:         #FEF9F4;
 $highlight:           lighten($brand-color, 35%);
 $text-color:          #0b0404;
 $muted-text-color:    #64614b;
+$subtle-text-color: rgba(black, 0.4);
 $accent-color:        #ed8b29;
 $font-family: 'junicoderegular', Latin, serif;
+$font-family-italic: 'junicodeitalic', Italic, serif;
+$font-family-bold: 'junicodebold', Italic, serif;
 $font-family-display: 'PP Editorial Old', Latin, serif;
+$font-family-display-italic: 'PP Editorial Old Italic', Italic, serif;
+$font-family-display-crazy: 'PP Editorial Old Ultrabold', Italic, serif;
 
 $on-bigphone:         375px;
 $on-tablet:           768px;
 $on-laptop:           960px;
 $on-desktop:          1200px;
 
-$root-font-size:      24px; 
+$root-font-size:      22px; 
 $body-font-size:      1em; 

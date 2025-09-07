@@ -17,6 +17,11 @@ layout: default
         {% endfor %}
       </ul>
     </nav>
+    <div class="search">
+      {% unless site.hide_search %}
+        {% include search.html %}
+      {% endunless %}
+    </div>
   </aside>
 
   <!-- Middle Panel: Blog Posts -->
@@ -34,11 +39,9 @@ layout: default
       {% for post in paginator.posts %}
         <article class="post-card">
           <a href="{{ post.url | relative_url }}">
-            {% if post.image %}
-              <div class="post-card-image">
-                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
-              </div>
-            {% endif %}
+            <div class="post-card-image">
+              <img src="{{ post.image | default: '/assets/images/carruc-eu-logo.png' | relative_url }}" alt="{{ post.title }}">
+            </div>
             <div class="post-card-content">
               <h2 class="post-card-title">{{ post.title }}</h2>
               <time class="post-card-date">{{ post.date | date: "%b %d, %Y" }}</time>

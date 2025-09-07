@@ -1,9 +1,8 @@
 ---
-title: Sulla Ruminazione
+title: Sulla Merdona
 category: psychology
 layout: post
 image: /assets/images/rumination.png
-intro: Una veloce panoramica su cos'è la ruminazione, perché è pericolosa e come interromperla.
 ---
 
 # Introduzione

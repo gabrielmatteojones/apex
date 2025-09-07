@@ -3,7 +3,7 @@
   border-radius: 1em;
   color: $text-color;
   display: inline;
-  font-size: calc(0.75 * $body-font-size);
+  font-size: calc(0.6 * $root-font-size);
   font-weight: 700;
   padding: 0 .75em;
   text-decoration: none;
@@ -30,6 +30,6 @@
 }
 
 .reversefootnote {
-  font-size: calc(0.75 * $body-font-size);
+  font-size: calc(0.6 * $root-font-size);
   opacity: .75;
 }

@@ -1,6 +1,6 @@
 // _sass/custom/_home.scss
 
-$site-background: #FFF9F2; // IMPORTANT: Replace with your site's background color
+$brand-color: #FFF9F2; // IMPORTANT: Replace with your site's background color
 
 .home-container {
   display: grid;
@@ -56,6 +56,22 @@ $site-background: #FFF9F2; // IMPORTANT: Replace with your site's background col
       }
     }
   }
+
+  .search {
+    width: 100%;
+    text-align: right;
+
+    #search {
+      text-align: right;
+      padding: 0;
+    }
+
+    #search__input {
+      text-align: right;
+      padding: 0.5em 0;
+    }
+  }
+  
 }
 
 .middle-panel {
@@ -87,6 +103,7 @@ blog-header {
 }
 
 .divider {
+  scale: 0.6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,48 +125,84 @@ blog-header {
   position: relative;
   width: calc(13 * $root-font-size);
   height: calc(7.25 * $root-font-size);
-  padding-top: calc(3.5 * $root-font-size);
+  padding-top: 0;
   box-sizing: border-box;
   text-align: center;
   border: none;
+  overflow: hidden;
 
   a {
     text-decoration: none;
     color: inherit;
+    display: block;
+    height: 100%;
+    position: relative;
   }
 
   .post-card-image {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(6 * $root-font-size);
-    z-index: 1;
-
+    top: 1em;
+    left: 3em;
+    right: 3em;
+    max-height: 45%;
+    overflow: hidden; 
+    z-index: -1;
+  
+    img {
+      width: 100%;   /* Ensures the image always fits the container's width */
+      height: 100%;  /* Maintains the image's aspect ratio, preventing horizontal distortion */
+      display: block;
+      margin: 0;
+    }
+  
     &::after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: calc(0.6 * $root-font-size);
-      background: linear-gradient(to top, $site-background, transparent);
+      height: calc(1 * $root-font-size);
+      background: linear-gradient(to top,
+        $brand-color,
+        rgba($brand-color, 0.9) 20%,
+        rgba($brand-color, 0.5) 50%,
+        rgba($brand-color, 0.2) 75%,
+        transparent
+      );
     }
   }
+  
 
   .post-card-content {
-    position: relative;
+    position: absolute;
+    left: calc(1 * $root-font-size);
+    right: calc(1 * $root-font-size);
+    bottom: calc(0.5 * $root-font-size);
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(0.2 * $root-font-size);
   }
 
   .post-card-title {
     font-size: calc(1.11 * $root-font-size);
-    margin: 0 0 calc(0.25 * $root-font-size) 0;
+    margin: 0;
     font-weight: normal;
+    text-shadow: 0 0 calc(1.5 * $root-font-size) rgba($brand-color, 1);
+    line-height: 1.15;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   .post-card-date {
     font-size: calc(0.67 * $root-font-size);
     color: $muted-text-color;
+    margin: 0;
   }
 }

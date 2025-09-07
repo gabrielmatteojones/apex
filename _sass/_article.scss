@@ -1,29 +1,124 @@
 .post {
-  background: $brand-color;
-  margin: 2em auto;
-  max-width: 60rem;
-  padding: 2em 0;
+  padding-top: 0.5em;
+  display: grid;
+  grid-template-columns: calc(11.5 * $root-font-size) minmax(auto, calc(28 * $root-font-size)) calc(11.5 * $root-font-size);
+  align-items: start;
+  justify-content: center;
+  width: 100%;
 }
 
-.post > * {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 36rem;
-  padding: 0 1em;
+/* Center the title and body in the middle column */
+.post > .post-title,
+.post > .post-content,
+.post > .post-meta,
+.post > .divided {
+  grid-column: 2 / 3;
 }
+
+/* Horizontal textbox-style menu above the title, left-aligned in center column */
+.post > .menu {
+  grid-column: 2 / 3;
+  justify-self: start;
+  align-self: start;
+  margin: calc(0.5 * $root-font-size) 0 0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.post > .menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 1em;
+}
+
+.post > .menu a {
+  text-decoration: none;
+  color: inherit;
+  font-family: $font-family;
+  font-variant: small-caps;
+  font-size: calc(1.11 * $root-font-size);
+  white-space: nowrap;
+}
+
+/* Optional side panels (empty by default) */
+.post .post-side-left {
+  grid-column: 1 / 2;
+  justify-self: end;
+  margin-right: 2em;
+}
+
+.post .post-side-left .logo {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: calc(0.6 * $root-font-size);
+}
+
+.post .post-side-left .logo img {
+  height: calc(1.11 * $root-font-size);
+  width: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0;
+}
+
+.post .post-side-right {
+  grid-column: 3 / 4;
+  justify-self: start;
+  margin-left: 2em;
+}
+
+/* Remove legacy centering to let the grid govern layout */
 
 .post > h1 {
   font-family: "PP Editorial Old";
-  font-size: calc(2 * $root-font-size);
-  max-width: 48rem;
-  padding: 2em 1em;
-  text-align: center;
+  font-size: calc(2.5 * $root-font-size);
+  margin: 0;
+  padding: calc(2.5 * $root-font-size) 0 calc(1 * $root-font-size);
+  text-align: left;
 }
+
+/* Headings inside the article body (exclude the top title) */
+.post .post-content h1,
+.post .post-content h2,
+.post .post-content h3,
+.post .post-content h4,
+.post .post-content h5,
+.post .post-content h6 {
+  font-family: "PP Editorial Old";
+}
+
+.post .post-content h1 { font-size: calc(1.67 * $root-font-size); }
+.post .post-content h2 { font-size: calc(1.33 * $root-font-size); }
+.post .post-content h3 { font-size: calc(1.11 * $root-font-size); }
+.post .post-content h4,
+.post .post-content h5,
+.post .post-content h6 { font-size: $root-font-size; }
 
 .post p {
   text-align: justify;
   text-indent: 1.5em;
   text-justify: inter-word;
+}
+
+/* Intro paragraph variant */
+.post .intro {
+  color: $subtle-text-color;
+  font-family: $font-family;
+  font-size: calc(0.83 * $root-font-size);
+  font-family: $font-family-italic;
+  text-indent: 0;
+}
+
+/* Place intro under title in center column with clean spacing */
+.post > .intro {
+  grid-column: 2 / 3;
+  margin: 0 0 calc(1 * $root-font-size);
+  padding: 0;
 }
 
 .post p:first-of-type,
@@ -33,6 +128,19 @@
 
 .post a:hover {
   background: $highlight;
+}
+
+/* Ensure body emphasis uses Junicode variants */
+.post em,
+.post i {
+  font-family: $font-family;
+  font-style: italic;
+}
+
+.post strong,
+.post b {
+  font-family: $font-family;
+  font-weight: 700;
 }
 
 .post dl,
