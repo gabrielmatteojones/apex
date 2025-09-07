@@ -14,7 +14,7 @@
 
 .post > h1 {
   font-family: "PP Editorial Old";
-  font-size: 2em;
+  font-size: calc(2 * $root-font-size);
   max-width: 48rem;
   padding: 2em 1em;
   text-align: center;
@@ -58,7 +58,7 @@
 
 .back-link {
   display: inline-block;
-  font-size: .75em;
+  font-size: calc(0.75 * $root-font-size);
   padding: 1em;
   text-decoration: none;
   text-transform: uppercase;

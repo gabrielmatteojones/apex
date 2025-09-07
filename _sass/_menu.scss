@@ -18,7 +18,7 @@
 
 .site-navigation li {
   list-style: none;
-  font-size: .875em;
+  font-size: calc(0.875 * $body-font-size);
   font-variant: small-caps;
   margin: 0;
   &.active a {
@@ -30,9 +30,10 @@
   display: block;
   padding: .25em .5em;
   text-decoration: none;
-  transition: opacity .125s ease-in-out;
+  transition: color .5s ease, opacity .125s ease-in-out;
   &:hover,
   &:focus {
     opacity: 1;
+    color: $accent-color;
   }
 }

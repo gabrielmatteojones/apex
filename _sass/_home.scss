@@ -1,0 +1,155 @@
+// _sass/custom/_home.scss
+
+$site-background: #FFF9F2; // IMPORTANT: Replace with your site's background color
+
+.home-container {
+  display: grid;
+  // This 3-column grid prioritizes the center column at 28em width.
+  // The side columns will shrink to 0 if needed to accommodate the center column,
+  // but will expand equally when there's extra space available.
+  grid-template-columns: minmax(0, 1fr) minmax(auto, calc(28 * $root-font-size)) minmax(0, 1fr);
+  align-items: start;
+  width: 100%;
+  padding: calc(2 * $root-font-size) 0; // Vertical padding only
+}
+
+.side-panel {
+  grid-column: 1 / 2;
+  justify-self: end;
+  margin-right: calc(2 * $root-font-size);
+  font-weight: lighter;
+
+  max-width: calc(15 * $root-font-size);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .logo img {
+    height: calc(5.75 * $root-font-size);
+    width: auto;
+    margin: 0;
+  }
+
+  .menu {
+    margin-top: calc(3 * $root-font-size);
+    width: 100%;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: right;
+    }
+
+    li {
+      margin-bottom: calc(-0.5 * $root-font-size);
+    }
+
+    a {
+      font-size: calc(1.67 * $root-font-size);
+      text-decoration: none;
+      color: inherit;
+      transition: color .5s ease;
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+.middle-panel {
+  grid-column: 2 / 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+blog-header {
+  width: 100%;
+  text-align: center;
+  height: calc(8.75 * $root-font-size);
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-title {
+  width: 100%;
+  font-size: calc(2.5 * $root-font-size);
+  margin: 0 auto;
+  height: calc(5.75 * $root-font-size);
+  display: flex;
+  align-items: flex-end;  /* Changed from 'center' to 'flex-end' */
+  justify-content: center;
+  font-family: $font-family-display;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(3 * $root-font-size);
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, calc(13 * $root-font-size));
+  justify-content: center;
+  gap: calc(1 * $root-font-size) calc(2 * $root-font-size);
+  width: 100%;
+}
+
+.post-card {
+  font-family: $font-family-display;
+  position: relative;
+  width: calc(13 * $root-font-size);
+  height: calc(7.25 * $root-font-size);
+  padding-top: calc(3.5 * $root-font-size);
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .post-card-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(6 * $root-font-size);
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: calc(0.6 * $root-font-size);
+      background: linear-gradient(to top, $site-background, transparent);
+    }
+  }
+
+  .post-card-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .post-card-title {
+    font-size: calc(1.11 * $root-font-size);
+    margin: 0 0 calc(0.25 * $root-font-size) 0;
+    font-weight: normal;
+  }
+
+  .post-card-date {
+    font-size: calc(0.67 * $root-font-size);
+    color: $muted-text-color;
+  }
+}
