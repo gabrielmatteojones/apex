@@ -1,5 +1,5 @@
 html {
-  font-size: var(--root-font-size, $root-font-size);
+  font-size: $root-font-size;
 }
 
 body {
@@ -11,18 +11,18 @@ body {
 }
 
 h1 {
-  font-size: calc(3 * $body-font-size);
+  font-size: calc(3 * $root-font-size);
   margin: 1em auto;
 }
 
 h2 {
-  font-size: calc(2 * $body-font-size);
+  font-size: calc(2 * $root-font-size);
   margin: 1em auto;
   text-align: left;
 }
 
 h3 {
-  font-size: calc(1.33 * $body-font-size);
+  font-size: calc(1.33 * $root-font-size);
   margin: 1em auto;
   text-align: left;
 }
