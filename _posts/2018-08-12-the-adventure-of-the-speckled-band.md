@@ -1,5 +1,5 @@
 ---
-title: The Adventure of the Speckled Band
+title: Articolo Uno
 author: Arthur Conan Doyle
 category: literature
 layout: post
