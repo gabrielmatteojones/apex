@@ -1,3 +1,11 @@
+- resume: "Resume"
+  url: /resume.html
+  
 - title: "About Me"
   url: /about.html
-  
+
+- title: "GitHub"
+  url: https://github.com/carruc
+
+- title: "LinkedIn"
+  url: https://linkedin.com/in/pietro-carrucciu
