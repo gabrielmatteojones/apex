@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "piece test"
-author: "seed"
+title: "Life Cycle"
+author: "Seed"
 categories: literature
 ---
 
@@ -32,4 +32,3 @@ Just you exist for me and that's it.
 Oh what a life it was for ye  
 Oh what a life it is for ye  
 Oh what a life it will be for ye  
--Seed
