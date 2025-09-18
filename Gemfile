@@ -5,3 +5,7 @@ gemspec
 
 # for demo site
 gem "jekyll-paginate"
+
+gem "bigdecimal"
+gem "logger"
+gem "json"
