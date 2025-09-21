@@ -3,11 +3,11 @@
 Gem::Specification.new do |spec|
   spec.name          = "hitchens-theme"
   spec.version       = "0.8.0"
-  spec.authors       = ["Pat Dryburgh"]
-  spec.email         = ["hello@patdryburgh.com"]
+  spec.authors       = ["Samiksha Marne"]
+  spec.email         = ["marne.samiksha.s@gmail.com"]
 
   spec.summary       = "An inarguably well-designed theme for Jekyll."
-  spec.homepage      = "https://github.com/patdryburgh/hitchens"
+  spec.homepage      = "https://samiksha-marne.github.io/hitchens/"
   spec.license       = "MIT"
 
   #spec.files         = Dir.glob("lib/**/*") + ["README.md", "LICENSE.txt"] 

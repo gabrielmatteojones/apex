@@ -3,15 +3,14 @@ layout: post
 title: About
 ---
 
-Undoubtably one of the great minds of our time, Christopher Hitchens challenged his readers to think deeply on topics of politics, religion, war, and science. This Jekyll theme is designed in his memory.
 
-<figure>
-  <img alt="Christopher Hitchens" src="https://upload.wikimedia.org/wikipedia/commons/6/63/Christopher_Hitchens_2008-04-24_001.jpg" />
-  <figcaption>
-    Photo by Fri Tanke and licensed under the <a href="https://creativecommons.org/licenses/by/3.0/deed.en">Creative Commons Attribution 3.0 Unported</a> license.
-  </figcaption>
-</figure>
 
-From [Wikipedia](https://en.wikipedia.org/wiki/Christopher_Hitchens):
 
->Christopher Eric Hitchens (13 April 1949 – 15 December 2011) was an Anglo-American author, columnist, essayist, orator, religious and literary critic, social critic, and journalist. Hitchens was the author, co-author, editor or co-editor of over 30 books, including five collections of essays on culture, politics and literature. A staple of public discourse, his confrontational style of debate made him both a lauded intellectual and a controversial public figure. He contributed to New Statesman, The Nation, The Weekly Standard, The Atlantic, London Review of Books, The Times Literary Supplement, Slate, Free Inquiry and Vanity Fair.
+
+Well, hello there, my radiant little wanderer—aren’t you just the brightest beam of light to stumble into my corner? I’m Samiksha Marne, and I’ve been waiting for you. Don’t worry, not in the “chains in the basement” way… probably.
+
+I’m a part-time overthinker, full-time collector of strange little moments. I like to wrap them in ribbons of sunshine, then slip in just enough shadow to make you wonder if it’s safe to unwrap.
+
+My work lives in that lovely in-between: tender but a little twisted, warm but with teeth. You might smile, you might flinch, you might do both at once (which is exactly how I like it).
+
+So, welcome. Think of this as a gallery made of sunlight and whispers—sweet on the tongue, but with something sharp just beneath the sugar.
