@@ -39,5 +39,21 @@
 
     {% include menu.html %}
 
+
+    <script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: {{ "/search.json" | relative_url | jsonify }},
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    noResultsText: '<li>No results found</li>',
+    limit: 10
+  });
+});
+</script>
+
+
   </body>
 </html>
