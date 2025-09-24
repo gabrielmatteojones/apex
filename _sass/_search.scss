@@ -4,31 +4,38 @@
   text-align: center;
 }
 
-#search__input {
+#search-input {
   background: transparent;
   border: 0;
-  font: 1em $font-family;
+  font: 1em "EB Garamond", Garamond, "Times New Roman", serif;
   padding: .5em;
-  color: $text-color;
+  color: #0b0404;
   text-align: center;
-  &:focus {
-    outline: 1px dashed $text-color;
-  }
 }
 
-#search button[type="submit"] {
-  display: none;
+#search-input:focus {
+  outline: 1px dashed #0b0404;
 }
 
-::-webkit-input-placeholder {
-  color: $muted-text-color;
+#results-container {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
 }
-::-moz-placeholder {
-  color: $muted-text-color;
+
+#results-container li {
+  margin: 0.5rem 0;
 }
-:-ms-input-placeholder {
-  color: $muted-text-color;
+
+#results-container a {
+  color: #0b0404;
+  text-decoration: none;
+  border-bottom: 1px dashed #64644B;
 }
-:-moz-placeholder {
-  color: $muted-text-color;
+
+#results-container a:hover {
+  color: #fff;
+  background: #dc4b3c;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
 }
